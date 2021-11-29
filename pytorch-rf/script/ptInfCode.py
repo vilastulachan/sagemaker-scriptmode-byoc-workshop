@@ -1,3 +1,6 @@
+##
+## Inference Handler
+##
 import json
 import logging
 import os
@@ -36,11 +39,6 @@ def input_fn(image_data, content_type='application/x-image'):
         if content_type == 'application/x-image':
             image_data = Image.open(io.BytesIO(image_data))
             image_data=  image_data.convert('RGB')
-    #         image_data = Image.open(requests.get(url, stream=True).raw)
-    # def input_fn(image_data):
-    #     logger.info('Deserializing the input data.')
-    #     image_data=image_data
-
             image_transform = transforms.Compose([
                 transforms.Resize(size=256),
                 transforms.CenterCrop(size=224),

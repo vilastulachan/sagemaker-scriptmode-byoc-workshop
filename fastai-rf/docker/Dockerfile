@@ -19,6 +19,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     LANG=C.UTF-8 \
     LC_ALL=C.UTF-8
 
+# The SageMaker Training Toolkit for training models
 RUN pip3 install --no-cache --upgrade \
     sagemaker-training
 
